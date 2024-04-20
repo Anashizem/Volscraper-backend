@@ -13,15 +13,8 @@ public class SearchsController {
     public SearchsController(SearchsService searchsService) {
         this.searchsService = searchsService;
     }
-
     @GetMapping
     public List<Searchs> getAllFlights() {
         return searchsService.getAllSearchs();
     }
-
-    @PostMapping
-    public void addFlight(@RequestBody Searchs Searchs) {
-        searchsService.saveSearchs(Searchs);
-    }
-
 }
